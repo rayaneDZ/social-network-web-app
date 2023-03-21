@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "MERN stack social network web app",
   "main": "server.js",
+  "engines":{
+    "node": "18.15.0",
+    "npm": "9.6.2"
+  },
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
