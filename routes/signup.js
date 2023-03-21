@@ -37,8 +37,7 @@ router.post('/', (req, res, next) => {
                         _id: new mongoose.Types.ObjectId(),
                         email: req.body.email,
                         hashed_password: hash,
-                        username: req.body.username,
-                        gender: req.body.gender
+                        username: req.body.username
                     });
                     user.save()
                         .then(result => {

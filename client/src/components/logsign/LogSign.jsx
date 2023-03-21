@@ -20,25 +20,30 @@ function LogSign(){
         const email = document.getElementById('email').value;
         const username = document.getElementById('signup_username').value;
         const password = document.getElementById('signup_password').value;
-        const gender = document.getElementById('gender').value;
         if (validateSignUp(email, password, username)){
+          console.log(username)
           //INITIALIZING SPANS
-          document.getElementById('signed_up_span').style.display= "none";
-          document.getElementById('taken_username_span').style.display= "none";
+          document.getElementById('email_span').style.display= "none";
           document.getElementById('taken_email_span').style.display= "none";
+          document.getElementById('username_span').style.display= "none";
+          document.getElementById('taken_username_span').style.display= "none";
+          document.getElementById('password_span').style.display= "none";
+
+          document.getElementById("chk").checked = true;
+          document.getElementById("chk").ariaHidden = false;
+          document.getElementById("chk").display = "block";
     
           //AXIOS REQUEST
           axios.post('/api/signup', { 
             'email' : email,
             'username' : username.toLowerCase(),
-            'password' : password,
-            'gender' : gender,
+            'password' : password
           }).then(res => {
             //this is handled in the then because the server responds with a 201
               if (res.data.message === "success"){
-                document.getElementById('signed_up_span').style.display= "block";
                 window.location.reload();
               }
+              
           }).catch(err => {
             //this is handled in the catch because the server responsed with a 409 status
             let message = err.response.data.message;
@@ -51,7 +56,7 @@ function LogSign(){
         }
       }
       const validateEmail = (email) =>{
-        var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const re = /^([a-zA-Z0-9._%+-]+)@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/
         return re.test(String(email).toLowerCase());
       }
       const validateSignUp = (email, password, username) => {
@@ -110,15 +115,15 @@ function LogSign(){
                 <label className='label-title' htmlFor="chk" aria-hidden="true" style={style.signupcolor}>Sign up</label>
 
                 <input className="logsign-input" type="email" name="email" placeholder="Email" id="email"/>
-                <span style={style.wrongformat} id="email_span">*Enter a valid email</span>
-                <span style={style.wrongformat} id="taken_email_span">*There's already an account associated with this email</span>
+                <span style={style.wrongformat} id="email_span" className='error-indicator'>*Enter a valid email</span>
+                <span style={style.wrongformat} id="taken_email_span" className='error-indicator'>*There's already an account associated with this email</span>
                 
                 <input className="logsign-input" type="text" name="txt" placeholder="Username" id="signup_username"/>
-                <span style={style.wrongformat} id="username_span">*Username must be at least 4 characters long</span>
-                <span style={style.wrongformat} id="taken_username_span">*Username taken</span>
+                <span style={style.wrongformat} id="username_span" className='error-indicator'>*Username must be at least 4 characters long</span>
+                <span style={style.wrongformat} id="taken_username_span" className='error-indicator'>*Username taken</span>
                 
                 <input className="logsign-input" type="password" name="pswd" placeholder="Password" id="signup_password"/>
-                <span style={style.wrongformat} id="password_span">*Password must be at least 6 characters long</span>
+                <span style={style.wrongformat} id="password_span" className='error-indicator'>*Password must be at least 6 characters long</span>
 
                 <button className="logsign-button" onClick={handleSignUp}>Sign up</button>
             </div>
