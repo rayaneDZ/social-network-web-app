@@ -14,7 +14,7 @@ function Footer (){
     return (
         <div style={style.outerdiv}>
             <p style={{margin : 0}}>Website created by</p>
-            <p style={{margin : 0}}>Rayane Bouthiba</p>
+            <p style={{margin : 0}}>Mohammed Ramzi Bouthiba <span>&#169;</span> </p>
         </div>
     )
 }

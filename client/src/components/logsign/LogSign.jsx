@@ -11,6 +11,9 @@ const style = {
     },
     signupcolor:{
       color: 'white'
+    },
+    titlecolor:{
+      color: '#573b8a'
     }
 }
 
@@ -109,6 +112,7 @@ function LogSign(){
     }
     const content = (
         <div className="logsign-card-container">
+          <h1 style={style.titlecolor}>Welcome</h1>
           <div className="logsign-card">
             <input className="logsign-input" type="checkbox" id="chk" aria-hidden="true" />
             <div className="signup-section">

@@ -4,7 +4,6 @@ import MakePost from '../MakePost.jsx'
 import Loading from '../Loading.jsx';
 import axios from 'axios';
 import moment from 'moment';
-import '../css/content.css';
 
 const style = {
     container : {
