@@ -24,7 +24,7 @@ package-lock.json
 .env
 ```
 
-### Set Envirenment Variables for Back-End
+### Set Envirenment Variables for your Back-End
 
 to set environement variables for the server :
 
@@ -58,7 +58,7 @@ in order for the environement variable to work on heroku you have to :
 
 - set them on the heroku website on the setting section and then click on Config Vars
 
-### Set Envirenment Variables for Front-End
+### Set Envirenment Variables for your Front-End
 
 to set environement variables for the react app :
 
