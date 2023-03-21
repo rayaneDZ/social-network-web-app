@@ -41,7 +41,7 @@ function LogSign(){
           }).then(res => {
             //this is handled in the then because the server responds with a 201
               if (res.data.message === "success"){
-                window.location.reload();
+                console.log("account created successfully")
               }
               
           }).catch(err => {
