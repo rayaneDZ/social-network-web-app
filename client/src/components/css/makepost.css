@@ -1,0 +1,25 @@
+textarea{
+    border: none;
+    resize : none;
+    height: 70px;
+    margin : 0;
+    background-color: white;
+}
+textarea:focus {
+    outline: none
+}
+#makepostcontainer{
+    padding: 20px;
+}
+#makePostImageIcon{
+    font-size: 40px;
+    margin-left: 20px;
+    color: grey;
+}
+#makePostImageIcon:hover {
+    cursor: pointer;
+    color: #673ab7;
+}
+.disabled{
+    pointer-events: none;
+}

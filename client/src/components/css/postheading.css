@@ -1,0 +1,33 @@
+#postDropDown {
+    position : absolute;
+    top : 65px;
+    right : 50px;
+    background-color : #ffffff;
+    z-index: 2;
+    color: #673ab7;
+    border-radius: 5px;
+    border : 1px solid #673ab7;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms, visibility 600ms;
+}
+#postDropDown div {
+    padding: 10px;
+}
+#postDropDown div:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+a {
+    color: inherit
+}
+.fa-ellipsis-v:hover{
+    color : #673ab7
+}
+@media only screen and (max-width: 600px) {
+    #postDropDown {
+        position : absolute;
+        top : 45px;
+        right : 30px;
+    }
+  }

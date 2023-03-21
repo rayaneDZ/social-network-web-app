@@ -1,0 +1,43 @@
+/*NEEDED IN SearchBar.jsx*/
+
+#searchbarform{
+  position: relative;
+  background: inherit;
+}
+input.search-field {
+  margin-bottom: 0;
+  font-weight: 500;
+  color: #000;
+  border: 0;
+  border-radius: 2px;
+  height: 36px;
+  padding: 0 0 0 20px;
+  width: 200px;
+  background: #FFF;
+  transition: background 0.2s, width .2s;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(0, 0, 0, 0.54);
+}
+input.search-field:focus {
+  outline: none;
+  width: 300px;
+  color: #212121;
+}
+.search-icon {
+  position: absolute;
+  top: 0;
+  padding-left: 10px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+#search-input:hover{
+  box-shadow: none
+}
+
+@media only screen and (max-width: 420px) {
+  input.search-field:focus {
+    width: 220px;
+  }
+}

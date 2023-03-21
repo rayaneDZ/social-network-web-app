@@ -1,0 +1,14 @@
+@media only screen and (max-width: 600px) {
+    #postContent {
+        padding-left: 0px !important;
+    }
+  }
+.post_image_container{
+    overflow: hidden;
+    max-height: 500px;
+    display: flex;
+    align-items: center;
+}
+.post_image_container:hover{
+    cursor: pointer;
+}

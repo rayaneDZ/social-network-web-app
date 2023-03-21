@@ -1,0 +1,68 @@
+#PHContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.PHPPcontainer{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}
+#PHProfilePicture {
+    width: 200px;
+    background-color: grey;
+}
+.followContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+.followContainer p {
+    margin : 0;
+}
+#followContainer button{
+    width: 100%;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid #673ab7;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+#followContainer button:hover {
+    background-color: #673ab7;
+    color: #FFF;
+}
+#editProfileButton {
+    width: 200px;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid #673ab7;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+#editProfileButton:hover {
+    background-color: #673ab7;
+    color: #FFF;
+}
+#editProfileDiv {
+    margin-top: 10px;
+    width: 200px;
+    text-align: center;
+    border: 1px solid #673ab7;
+    border-radius: 5px;
+}
+.editProfileSubButtons {
+    padding: 10px;
+    border: none;
+}
+
+.editProfileSubButtons:hover {
+    cursor: pointer;
+    background-color: #673ab7;
+    color: #FFF;
+    border: none;
+}

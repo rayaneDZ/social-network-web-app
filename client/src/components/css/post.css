@@ -1,0 +1,15 @@
+#postContainer{
+    padding : 30px;
+    margin-bottom: 15px;
+}
+@media only screen and (max-width: 600px) {
+    #postContainer {
+        padding: 10px ;
+    }
+    #commentInput button {
+        padding: 0 5px 0 5px;
+    }
+    #commentInput input {
+        margin-right: 5px !important;
+    }
+  }
